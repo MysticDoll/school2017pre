@@ -1,0 +1,259 @@
+<html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=yes'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css"><style>h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;
+}
+
+a {
+    color: #0069d6;
+    text-decoration: none;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+    background-color: #f5f4ea;
+}
+code {
+    background-color: #f5f4ea;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #f5f4ea;
+    color:#454545;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style></head><body><h1 id="0-">0章 素朴集合</h1>
+<h2 id="-0-1">定義 0.1</h2>
+<p>集合$A$から$B$への写像$f$に対して</p>
+<p>(1) ${}^\forall a, b \in A \ f(a) = f(b) \rightarrow a = b$</p>
+<p>を満たすとき $f$ は 単射(injection) と呼ばれる。</p>
+<p>(2) ${}^\forall c \in B \ {}^\exists a \in A f(a) = c$</p>
+<p>を満たすとき $f$ は 全射(surjection) と呼ばれる。</p>
+<p>(3) 単射かつ全射を 全単射（bijection) と呼ぶ。</p>
+<h2 id="-0-2">定義0.2</h2>
+<p>2つの集合A,B に対して</p>
+<p>$A \tilde{} B \ \overset{\Leftrightarrow}{def}$ $A$ から $B$ への全単射が存在する</p>
+<p>として　$\tilde{}$ を定義する。</p>
+<h3 id="-">注意</h3>
+<p>$\tilde{}$ は同値関係である。</p>
+<ol>
+<li>$A \tilde{} A$</li>
+<li>$A \tilde{} B \rightarrow B \tilde{} A$</li>
+<li>$A \tilde{} B$ かつ $B \tilde{} C \rightarrow A \tilde{} C$</li>
+</ol>
+<h2 id="-0-3">定義0.3</h2>
+<p>一般の同値関係 $\tilde{}$ に対して</p>
+<p>$\lbrack A \rbrack_{\tilde{}} = \lbrace B \mid B \tilde{} A \rbrace$</p>
+<p>を $A$ の同値類と呼ぶ</p>
+<p>特に定義0.2の $\tilde{}$ に対して</p>
+<p>$\lbrack A \rbrack_{\tilde{}}$ を $\mid A \mid$ と記し</p>
+<p>Aの濃度(cardinality)と呼ぶ</p>
+<h2 id="-0-4">定義0.4</h2>
+<p>$\mid A \mid$ と$\mid B \mid$ に対して</p>
+<p>$A$ から $B$ への単射が存在するとき</p>
+<p>$\mid A \mid \leq \mid B \mid$ と記す</p>
+<h3 id="-">注意</h3>
+<p>この定義は well-defined </p>
+<h2 id="-0-1">定理0.1</h2>
+<p>(1) $\mid A \mid \leq \mid B \mid$ かつ $\mid B \mid \leq \mid C \mid \rightarrow \mid A \mid \leq \mid C \mid$</p>
+<p>(2) $\mid A \mid \leq \mid B \mid$ かつ $\mid B \mid \leq \mid A \mid \Rightarrow \mid A \mid = \mid B \mid$</p>
+<h2 id="-0-2">定理0.2</h2>
+<p>カントール・ベルンシュタイン(シュレーダー)の定理</p>
+<p>Cantor・Bernstein(Schroeder)</p>
+<p>(2) すなわち　$A$ から $B$ への単射 $f$ と $B$ から　$A$ への単射 $g$ が存在するとき $A$ から $B$ への全単射が存在する</p>
+<h2 id="-0-5">定義0.5</h2>
+<p>$ \mid A \mid \leq \mid B \mid$ かつ $\mid A \mid \neq \mid B \mid$ のとき $\mid A \mid &lt; \mid B \mid$ と記す</p>
+<h2 id="-0-3">定理0.3</h2>
+<p>$ \mid \boldsymbol{Q} \mid = \mid \boldsymbol{Z} \mid = \mid \boldsymbol{N} \mid $</p>
+<h3 id="-">証明</h3>
+<p>$ \mid \boldsymbol{N} \mid = \mid \boldsymbol{A} \mid $ とは</p>
+<p>$ f: \boldsymbol{N} \rightarrow \boldsymbol{A}$ なる全単射が存在すること</p>
+<p>$\Leftrightarrow$</p>
+<p>$ \boldsymbol{A} = \lbrace f(1) , f(2) , \cdots \rbrace $</p>
+<p>$ \Leftrightarrow \boldsymbol{A} $ の要素に番号をつけて、 $ \boldsymbol{A} = \lbrace a_1 , a_2 ,\cdots \rbrace $ と表すことが出来る。</p>
+<p>$\boldsymbol{Z} = \lbrace \cdots , -2, -1, 0, 1, 2, \cdots \rbrace = \lbrace \cdots , a_5 , a_3 , a_1 , a_2 , a_4 , \cdots \rbrace$ の様に番号付けをすると、 $\boldsymbol{Z} = \lbrace a_1 , a_2 , \cdots \rbrace $</p>
+<p>$ \mid \boldsymbol{Q} \mid $ については省略</p>
+<h2 id="-0-6">定義0.6</h2>
+<p>$ \mid \boldsymbol{A} \mid = \mid \boldsymbol{N} \mid $ なる集合 $\boldsymbol{A}$ を加算集合(countable set)と呼ぶ</p>
+<h3 id="-">注</h3>
+<p>有限集合は加算集合ではない</p>
+<p>有限集合も含めて <strong>高々加算集合</strong> と呼ぶ</p>
+<h2 id="-0-4">定理0.4</h2>
+<p>$ \mid \boldsymbol{R} \mid &gt; \mid \boldsymbol{N} \mid$</p>
+<h3 id="-">証明</h3>
+<p>$ \mid \boldsymbol{R} \mid \geq \mid \boldsymbol{N} \mid $ は明らか $ \because A \supset B $ なら $ \mid A \mid \geq \mid B \mid $</p>
+<p>$ \mid \boldsymbol{R} \mid \neq \mid \boldsymbol{N} \mid $ を示す。</p>
+<h4 id="-">注</h4>
+<p>$ \mid \boldsymbol{R} \mid = \mid ( - \frac{\pi}{2} , \frac{\pi}{2} ) \mid $ ($ \because f: ( - \frac{\pi}{2} , \frac{\pi}{2} ) \rightarrow \boldsymbol{R} $ なる全単射が存在($ x \rightarrow \tan x $))</p>
+<p>$ \mid (0, 1) \mid \neq \mid \boldsymbol{N} \mid$ を示せばよい</p>
+<p>背理法で示す。(対角線論法)</p>
+<p>$\mid (0, 1) \mid = \mid \boldsymbol{N} \mid$ と仮定して矛盾を導く。</p>
+<p>$ (0, 1) = \lbrace a_1, a_2, \cdots \rbrace $ とおく</p>
+<p>$ \begin{array}{cc}
+a_1 = 0. a_1^1 a_2^1 \cdots \\
+a_2 = 0. a_1^2 a_2^2 \cdots \\
+ \vdots \\
+a_i = 0. a_1^i a_2^i \cdots \\
+\end{array}$</p>
+<p>Comment: WIP</p>
+<h2 id="-0-7">定義0.7</h2>
+<p>$\mid \boldsymbol{A} \mid^{\mid \boldsymbol{B} \mid} = \mid \boldsymbol{A}^{\mid\boldsymbol{B} \mid} $</p>
+<p>$\boldsymbol{A}^\boldsymbol{B} = \boldsymbol{B} $ から $ \boldsymbol{A} $ への写像全体の集合</p>
+<h2 id="-0-5">定理0.5</h2>
+<p>$ 2^{\mid \boldsymbol{A} \mid} &gt; \mid \boldsymbol{A} \mid$</p>
+<h3 id="-">証明</h3>
+<p>$ 2^{\mid \boldsymbol{A} \mid} \geq \mid \boldsymbol{A} \mid $ を示す</p>
+<p>$ f: \boldsymbol{A} \rightarrow 2^\boldsymbol{A} $ を </p>
+<p>$ a \in \boldsymbol{A} $ に対して $ f(a) \in 2^\boldsymbol{A} $ を以下で定める。</p>
+<p>$ f(a) (x) = \begin{cases}
+  1 &amp; x = a \\
+  0 &amp; x \neq a
+\end{cases}$</p>
+<p>$ 2 := \lbrace 0, 1 \rbrace$</p>
+<p>$ f \in 2^\boldsymbol{A} $ に対し</p>
+<p>$ S_f \subset \boldsymbol{A} $ を以下の様にとる</p>
+<p>$ S_f = \lbrace x \in \boldsymbol{A} \mid f(x) = 1 \rbrace $</p>
+<p>$ \boldsymbol{A} $ の部分集合と $ \boldsymbol{A} $ から $ \lbrace 0, 1 \rbrace $ への写像は同一視できる(全単射がある)</p>
+<p>$ a \neq b $ なら $ f(a) \neq f(b) $ なので、単射(よって $ \mid 2^\boldsymbol{A} \mid \geq \mid \boldsymbol{A} \mid$)</p>
+<p>$ 2^{\mid \boldsymbol{A} \mid} \neq \mid \boldsymbol{A} \mid $ を背理法で示す</p>
+<p>等しいとして</p>
+<p>$ \boldsymbol{A} $ から $ \lbrace 0,1 \rbrace^\boldsymbol{A} $ への全単射を $f$ とおく</p>
+<p>$ \lbrace 0,1 \rbrace^\boldsymbol{A} = \lbrace f(a) \mid a \in \boldsymbol{A} \rbrace$</p>
+<p>$ g(a) = \begin{cases}
+  0 &amp; ;f \ f(a)(a) = 1 \\
+  1 &amp; ;f \ f(a)(a) \neq 1
+\end{cases}$ </p>
+<p>で $g \in \lbrace 0,1 \rbrace^\boldsymbol{A} $ を定める</p>
+<p>このとき任意の $a \in \boldsymbol{A} $ に対して</p>
+<p>$ g(a) \neq f(a)(a)$</p>
+<p>すなわち</p>
+<p>$ g \neq f(a) $ より矛盾</p>
+<h2 id="-0-6">定理0.6</h2>
+<p>$ s^{\mid \boldsymbol{N} \mid} = \mid \boldsymbol{R} \mid$</p>
+
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}}); </script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script></body></html>
