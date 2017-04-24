@@ -222,7 +222,7 @@ a_i = 0. a_1^i a_2^i \cdots \\
 \end{array}$</p>
 <p>Comment: WIP</p>
 <h2 id="-0-7">定義0.7</h2>
-<p>$\mid \boldsymbol{A} \mid^{\mid \boldsymbol{B} \mid} = \mid \boldsymbol{A}^{\mid\boldsymbol{B} \mid} $</p>
+<p>$\mid \boldsymbol{A} \mid^{\mid \boldsymbol{B} \mid} = \mid \boldsymbol{A}^{\boldsymbol{B}} \mid$</p>
 <p>$\boldsymbol{A}^\boldsymbol{B} = \boldsymbol{B} $ から $ \boldsymbol{A} $ への写像全体の集合</p>
 <h2 id="-0-5">定理0.5</h2>
 <p>$ 2^{\mid \boldsymbol{A} \mid} &gt; \mid \boldsymbol{A} \mid$</p>
@@ -254,6 +254,56 @@ a_i = 0. a_1^i a_2^i \cdots \\
 <p>すなわち</p>
 <p>$ g \neq f(a) $ より矛盾</p>
 <h2 id="-0-6">定理0.6</h2>
-<p>$ s^{\mid \boldsymbol{N} \mid} = \mid \boldsymbol{R} \mid$</p>
+<p>集合$A$の部分集合全体からなる集合を$\mathcal{P}(A)$と記す</p>
+<p>すなわち</p>
+<p>$\mathcal{P}(A) = \lbrace B \mid B \subset A \rbrace$</p>
+<p>$\mid \mathcal{P}(A) \mid = 2^{\mid A \mid}$</p>
+<h2 id="-0-7">定理0.7</h2>
+<p>$ 2^{\mid \boldsymbol{N} \mid} = \mid \boldsymbol{R} \mid$</p>
+<h3 id="-">証明</h3>
+<p>$\mid \boldsymbol{R} \mid = \mid (0,1) \mid$ なので</p>
+<p>$2^{\mid \boldsymbol{N} \mid} = \mid (0,1) \mid$を示す。</p>
+<p>$\mid (0,1) \mid \geq 2^{\mid \boldsymbol{N} \mid}$ を示す。</p>
+<p>$(0,1) \ni a$ に対して</p>
+<p>$a$の2進表示を</p>
+<p>$0,a_1 a_2 a_3 \dots$</p>
+<p>$f(a) \in \lbrace 0,1 \rbrace^\boldsymbol{N}$ を以下で定める</p>
+<p>$f(a)(i) = a_i$ これは明らかに単射になる</p>
+<p>逆、$2^{\mid \boldsymbol{N} \mid} \geq \mid (0,1) \mid $を示す</p>
+<p>$f \in \lbrace 0, 1 \rbrace^\boldsymbol{N}$ に対して</p>
+<p>$f(1),f(2), \cdots$と定め</p>
+<p>これに対して</p>
+<p>$a = 0.1a_10a_20a_3\cdots$とおき</p>
+<p>この$a$を使って $\varphi(f) = a$ と置く</p>
+<p>$\varphi(f) \in (0,1)$</p>
+<p>$\varphi$は明らかに</p>
+<p>$\lbrace 0,1 \rbrace^\boldsymbol{N}$かつ$0,1)$への単射</p>
+<h2 id="-0-8">定理0.8</h2>
+<p>集合全体の集まりは集合ではない。</p>
+<h3 id="-">証明</h3>
+<p>もし集合全体の集まりが集合だとすると、それを$A$におく</p>
+<p>定理0.5と定理0.6により、</p>
+<p>$\mid \mathcal{P} (A) \mid &gt; \mid A \mid$</p>
+<p>ところが、$A$は集合全体の集まりなので、 $A \supset \mathcal{P} (A)$ よって</p>
+<p>$\mid A \mid \geq \mid \mathcal{P} (A) \mid$</p>
+<p>よって $\mid A \mid &gt; \mid A \mid$より矛盾</p>
+<h2 id="-0-9">定理0.9</h2>
+<p>一般に集合$S$上の2項関係$\geq$が順序であることは</p>
+<ol>
+<li>${}^\forall a, b \in S \  a \geq b , b \geq c \Rightarrow a \geq c$</li>
+<li>${}^\forall a \in S \ a \geq a$</li>
+</ol>
+<p>さらに以下を満たすものを全順序と呼ぶ</p>
+<ol>
+<li>${}^\forall a, b \ a \neq b \Rightarrow a \geq b $ または $b \geq a$</li>
+</ol>
+<h2 id="-1">問題1</h2>
+<p>$\mid \boldsymbol{R} \mid &gt; \mid A \mid &gt; \mid \boldsymbol{N} \mid \ \mid \boldsymbol{R} \mid &gt; \mid \boldsymbol{N} \mid$</p>
+<p>なる$A\subset\boldsymbol{R}$は存在するか？</p>
+<p>これは決定不能であることが証明されている</p>
+<p>濃度上の$\geq$は順序である</p>
+<h2 id="-2">問題2</h2>
+<p>これは全順序か？</p>
+<p>これは選択公理を使えばYes,使わなければNoとなる</p>
 
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}}); </script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script></body></html>
