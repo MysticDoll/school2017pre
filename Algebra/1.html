@@ -305,5 +305,56 @@ a_i = 0. a_1^i a_2^i \cdots \\
 <h2 id="-2">問題2</h2>
 <p>これは全順序か？</p>
 <p>これは選択公理を使えばYes,使わなければNoとなる</p>
+<h2 id="-axiom-of-choice-ac-">選択公理 (Axiom of Choice, AC)</h2>
+<p>空でない集合を要素に持つ任意の集合$A$に対して</p>
+<p>$A$から $UA$ への写像 $f$ で ${}^\forall a \in A \  f(a) \in a$ なるものが存在する。 (UA = \boldsymbol{N})</p>
+<h3 id="-1">例1</h3>
+<p>$A = \lbrace \lbrace 0, 2 \rbrace , \lbrace 0, 1 \rbrace \rbrace$</p>
+<p>$f$ として</p>
+<ul>
+<li>$f(\lbrace 0,2 \rbrace) = 0 \ (0 \in \lbrace 0,2 \rbrace)$</li>
+<li>$f(\lbrace 0,1 \rbrace) = 1 \ (1 \in \lbrace 0,1 \rbrace)$</li>
+</ul>
+<h3 id="-">例</h3>
+<p>$A = \lbrace A_2 , A_3 , A_5 , \cdots , A_i \rbrace $</p>
+<p>$f$として $f(A_i) = p_i (\in A_i)$ とおけばよい</p>
+<h2 id="-0-11-well-order-">定義 0.11 整列順序(well-order)</h2>
+<p>集合$A$上の全順序$\geq$に対して、$A$の任意の部分集合$B$が最小元を持つとき、$\geq$は$A$上の整列順序であるという。</p>
+<h2 id="-">定理</h2>
+<p>$A$上の全順序$\geq$に対して$\geq$が$A$上の整列順序</p>
+<p>$\Leftrightarrow$</p>
+<p>$a_1 &gt; a_2 &gt; \cdots$ なる$A$の要素の無限下降列が存在しない</p>
+<h3 id="-">証明</h3>
+<h4 id="-rightarrow-">$\Rightarrow$</h4>
+<p>対偶: 整列順序でない $\Leftrightarrow a_1 &gt; a_2 &gt; \cdots$ が存在</p>
+<p>$B = \lbrace a_1, a_2, \cdots \rbrace$ をとると、$B$には最小元が存在しない。つまり整列順序ではない。</p>
+<h4 id="-leftarrow-">$\Leftarrow$</h4>
+<p>対偶: 整列順序でないとして、最小元を持たない部分集合を$B$とおく。</p>
+<p>$B \ni a_1$ とする。</p>
+<p>$a_1$は最小元でないので$a_1 &gt; a_2$ なる$a_2 \in B$ が存在する。</p>
+<p>$a_2$も最小元でないので、$a_2 &gt; a_3$なる$a_3 \in B$が存在する。</p>
+<p>これを繰り返すと、$a_1 &gt; a_2 &gt; \cdots$なる無限下降列ができる。</p>
+<h2 id="-0-9-">定理0.9 順序同型定理</h2>
+<p>整列順序を持った集合$A,B$に対して</p>
+<p>$A$から$B$のなkへの順序同型か$B$から$B$の中への順序同型のいずれかが存在する。</p>
+<p>$f$が$A$から$B$の中への順序同型とは、$f$は単射で$a &lt; b \Leftrightarrow f(a) &lt; f(b)$</p>
+<p>$A$の$f$による像($f(A)$と記す)が$B$になるか、あるいは$B$の切片すなわち$\lbrace b \in B \mid b \in C \rbrace$となる</p>
+<h2 id="-0-10-">定理0.10 整列可能性定理</h2>
+<p>どんな集合$A$に対しても、$A$上の整列集合が存在する</p>
+<h3 id="-">証明</h3>
+<p>AC(選択公理)を使って証明する。</p>
+<h4 id="-">系</h4>
+<p>勝手な集合$A,B$に対して $\mid A \mid &gt; \mid B \mid$または $\mid A \mid = \mid B \mid$ または $\mid A \mid &lt; \mid B \mid$ のいずれかが成り立つ。</p>
+<h2 id="-0-11-zorn-s-lemma-">定理 0.11 (ツォルンの補題 Zorn&#39;s Lemma)</h2>
+<p>集合$A$上の順序$\leq$に対して(全順序とは限らない)</p>
+<p>$A$の$\leq$に関して全順序となっているような勝手な部分集合$B$が$A$上に上界を持つとき、$A$には極大元が存在する。</p>
+<h3 id="-">例</h3>
+<p>$A = \mathcal{P}(\boldsymbol{N})$ </p>
+<p>$x,y \in A \  (x,y \subseteq \boldsymbol{N})$</p>
+<p>$x \geq y \Leftrightarrow x \supset y$</p>
+<p>$B = \lbrace \lbrace 1 \rbrace, \lbrace 1,2 \rbrace, \lbrace 1,2,3 \rbrace, \cdots \rbrace$</p>
+<p>$\geq$は$B$上の全順序。</p>
+<p>$B$の上界$c$とは $c \geq \lbrace 1 \rbrace , \lbrace 1,2 \rbrace , \cdots$ なる $c \in A$ こんな$c$は$B$にはない</p>
+<p>$C = \boldsymbol{N}$ と置くとOK</p>
 
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}}); </script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script></body></html>
