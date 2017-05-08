@@ -1,0 +1,203 @@
+<html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=yes'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css"><style>h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;
+}
+
+a {
+    color: #0069d6;
+    text-decoration: none;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+    background-color: #f5f4ea;
+}
+code {
+    background-color: #f5f4ea;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #f5f4ea;
+    color:#454545;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style></head><body><h1 id="2-group-ring-field-">2章 群(Group),環(ring),体(field)</h1>
+<h2 id="-1-1-group-">定義1.1 (群, Group)</h2>
+<p>群$G$は以下の4つの2項演算$\circ$を持つ集合</p>
+<ol>
+<li>${}^\forall a, b \in G, \  a \circ b \in G$ (閉包)</li>
+<li>${}^\forall a, b, c \in G, \  a \circ (b \circ c) = (a \circ b) \circ c$ (結合則)</li>
+<li>${}^\exists e \in G ; {}^\forall a \in G, \ a \circ e  = e \circ a = a$ (単位元)</li>
+<li>${}^\forall a \in G \ {}^\exists b \in G ; a \circ b = b \circ a = e$ (逆元)</li>
+</ol>
+<p>単位元は一意に定まる。</p>
+<h2 id="-1-2-ring-">定義1.2 (環, ring)</h2>
+<p>集合$R$上の2項演算$\bullet$と$+$が次の性質を持つとき、$(R, \bullet, +)$を環と呼ぶ($\bullet, +$を略して$R$を環と呼ぶこともある)</p>
+<ol>
+<li>$(R, +)$は可換群
+単位元を$0$, $a$の逆元を$-a$と記す</li>
+<li>$`{}^\forall a, b ,c \in R ,\ (a \bullet b) \bullet c = a \bullet (b \bullet c)$</li>
+<li>${}^\exists e \in R ; {}^\forall a \in R \ a \bullet e = e \bullet a = a$
+($e$はユニークに定まる、これを$1$と記す)</li>
+<li>${}^\forall a, b, c \in R \ a \bullet (b + c) = (a \bullet b) + (a \bullet c)$</li>
+</ol>
+<h2 id="-1-3-field-">定義1.3 (体, Field)</h2>
+<p>可換環 $(R, +, \bullet)$ が　$\bullet$　に関する逆元を持つとき、すなわち ${}^\forall a \in R \ a \neq 0 \rightarrow {}^\exists x \ a \bullet x = x \bullet a = 1$を満たすとき$R$を体と呼ぶ。</p>
+<p>$x$はユニークに定まり、これを$a^{-1}$と記す。</p>
+<p>$\mid R \mid$ が有限のとき、$R$を有限体と呼ぶ</p>
+<h2 id="-1-5-boldsymbol-z-_p-p-2-">定義1.5 $\boldsymbol{Z}_p$ ($p$は$2$以上の自然数)</h2>
+<p>$\boldsymbol{Z}$上の2項関係$\tilde{}_p$を $x \tilde{}_p y \Leftrightarrow_{\text{det}} x - y$が$p$で割り切れる。</p>
+<p>$\boldsymbol{Z}$の$\tilde{}_p$による同地類の集合を$\boldsymbol{Z}_p$で表す。</p>
+<p>$\lbrack x \rbrack_p = \lbrace y \in \boldsymbol{Z} \mid y \tilde{}_p x \rbrace$ を単に$\rbrack x \lbrack$と記す。</p>
+<h3 id="-boldsymbol-z-_5-">例 $\boldsymbol{Z}_5$</h3>
+<p>$\boldsymbol{Z}_5 = \lbrace \lbrack 0 \rbrack, \lbrack 1 \rbrack, \lbrack 2 \rbrack, \lbrack 3 \rbrack, \lbrack 4 \rbrack \rbrace$</p>
+<p>$\boldsymbol{Z}_p$の元に対して</p>
+<p>$\lbrack x \rbrack \bullet \lbrack y \rbrack =_{\text{det}} \lbrack x \bullet y \rbrack$</p>
+<p>$\lbrack x \rbrack + \lbrack y \rbrack =_{\text{det}} \lbrack x + y \rbrack$</p>
+<p>$\boldsymbol{Z}_p$は可換環になる。 $0$ は $\lbrack 0 \rbrack$, $1$ は $\lbrack 1 \rbrack$ 一般には体にならない。</p>
+<h2 id="-1-1">定理1.1</h2>
+<p>$\boldsymbol{Z}_p$ が体 $\Leftrightarrow p$が素数</p>
+<h3 id="-">証明</h3>
+<p>$\Rightarrow$ 対偶、$p$が素数でないとして、$p = a,b$とすると</p>
+<p>$\lbrack a \rbrack \bullet \lbrack b \rbrack = \lbrack 0 \rbrack$</p>
+<p>$\lbrack a \rbrack^{-1}$が存在するとすると、$\lbrack e \rbrack * \lbrack b \rbrack = \lbrack a \rbrack^{-1} \bullet \lbrack a \rbrack \bullet \lbrack b \rbrack = \lbrack a \rbrack^{-1} \bullet \lbrack 0 \rbrack = \lbrack 0 \rbrack$ となり矛盾。</p>
+<p>$\Leftarrow$ </p>
+<p>かってな$\lbrack x \rbrack \neq \lbrack 0 \rbrack$なる$x$に対して</p>
+<p>$\lbrack x \rbrack \bullet \lbrack y \rbrack = \lbrack 1 \rbrack$となる$y \in \boldsymbol{Z}$が存在することを示す。</p>
+<p>$\lbrack x \rbrack = \lbrack a \rbrack$となる$a \ (0 &lt; a &lt; p)$をとる</p>
+<p>$\text{GCD}(a,p) = 1$であることに注意する($p$は素数)</p>
+<h4 id="-">補題</h4>
+<p>一般の自然数$a,b$に対して</p>
+<p>$\text{GCD}(a,b) = sa + tb$ なる$s, t \in \boldsymbol{Z}$が存在する。</p>
+<h2 id="-1-4">定義1.4</h2>
+<p>有限体$K$に対して</p>
+<p>$1 + 1 + \cdots $はどこかで$0$になる。そうでないと、$K$は無限体になる</p>
+<p>$0 = \sum_n 1$なる なる最小の$n$を$K$の票数と呼ぶ。</p>
+
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}}); </script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script></body></html>
