@@ -173,7 +173,7 @@ sup {
 <p>$\mid R \mid$ が有限のとき、$R$を有限体と呼ぶ</p>
 <h2 id="-1-5-boldsymbol-z-_p-p-2-">定義1.5 $\boldsymbol{Z}_p$ ($p$は$2$以上の自然数)</h2>
 <p>$\boldsymbol{Z}$上の2項関係$\tilde{}_p$を $x \tilde{}_p y \Leftrightarrow_{\text{det}} x - y$が$p$で割り切れる。</p>
-<p>$\boldsymbol{Z}$の$\tilde{}_p$による同地類の集合を$\boldsymbol{Z}_p$で表す。</p>
+<p>$\boldsymbol{Z}$の$\tilde{}_p$による同値類の集合を$\boldsymbol{Z}_p$で表す。</p>
 <p>$\lbrack x \rbrack_p = \lbrace y \in \boldsymbol{Z} \mid y \tilde{}_p x \rbrace$ を単に$\rbrack x \lbrack$と記す。</p>
 <h3 id="-boldsymbol-z-_5-">例 $\boldsymbol{Z}_5$</h3>
 <p>$\boldsymbol{Z}_5 = \lbrace \lbrack 0 \rbrack, \lbrack 1 \rbrack, \lbrack 2 \rbrack, \lbrack 3 \rbrack, \lbrack 4 \rbrack \rbrace$</p>
@@ -199,5 +199,26 @@ sup {
 <p>有限体$K$に対して</p>
 <p>$1 + 1 + \cdots $はどこかで$0$になる。そうでないと、$K$は無限体になる</p>
 <p>$0 = \sum_n 1$なる なる最小の$n$を$K$の票数と呼ぶ。</p>
+<h2 id="-">系</h2>
+<p>$p$を素数とするとき、 $p \mid ab \Rightarrow p \mid a$ または $p \mid b $のいずれか一方が必ず成り立つ</p>
+<h2 id="-1-5-">定義1.5(部分群)</h2>
+<p>群$(G, \bullet, e) $ $e$は単位元に対して、$G$の部分集合$H$に対して$(H, \bullet , e) $ が群になるとき、$H$を$G$の部分群と呼ぶ。</p>
+<h2 id="-1-6-">定義1.6 部分環</h2>
+<h2 id="-1-7-">定義1.7 部分体</h2>
+<p>も同様に定義される。</p>
+<h2 id="-1-2-">定理1.2 ラグランジェの定理</h2>
+<p>$H$を有限群$G$の部分群とするとき、</p>
+<p>$\mid H \mid \mid \mid G \mid$ </p>
+<h3 id="-">証明</h3>
+<p>$G \ni x, y$に対して</p>
+<p>$x \tilde{} y \overset{\text{det}}{\Leftrightarrow} xH = yH$と定めると</p>
+<p>$\tilde{}$は同値関係になる。</p>
+<p>$xH = \lbrace x \bullet h \mid h \in H \rbrace$</p>
+<p>${}^\forall x_1, x_2 \in G$に対して</p>
+<p>$\mid x_1 H \mid = \mid x_2 H \mid = \mid H \mid = \mid e H \mid$が成り立つ。</p>
+<h2 id="-">フェルマーの小定理</h2>
+<p>$p$を素数とするとき</p>
+<p>$0 &lt; x &lt; p$なる任意の$x$に対して</p>
+<p>$x^{p-1} \mod p = 0$</p>
 
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}}); </script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script></body></html>
