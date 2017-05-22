@@ -1,0 +1,194 @@
+<html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=yes'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css"><style>h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;
+}
+
+a {
+    color: #0069d6;
+    text-decoration: none;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+    background-color: #f5f4ea;
+}
+code {
+    background-color: #f5f4ea;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #f5f4ea;
+    color:#454545;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style></head><body><h1 id="2-">2章 線形空間, 基底, 商空間</h1>
+<h2 id="-2-1">定義2.1</h2>
+<p>体$K$jouno senkeikuukan $V$とは</p>
+<p>$V$上の二項演算$+$に対して、$V$が可換群をなし</p>
+<p>$K$の任意の要素$C$と$V$の任意の要素$\boldsymbol{v}$に対して演算$\bullet$が定義され、$c \bullet \boldsymbol{V} \in V$と以下が成り立つこと</p>
+<ol>
+<li>${}^\forall c \in K ,\ {}^\forall \boldsymbol{v}_1 , \boldsymbol{v}_2 \in V \ c(\boldsymbol{v}_1 + \boldsymbol{v}_2 ) = c \boldsymbol{v}_1 + c \boldsymbol{v}_2$</li>
+<li>${}^\forall a,b \in K ,\ \boldsymbol{v} \in V \ (a \bullet b)\bullet \boldsymbol{v} = a\bullet (b \bullet \boldsymbol{v}) $</li>
+<li>${}^\forall \boldsymbol{v} \in V \ 1 \bullet \boldsymbol{v} = \boldsymbol{v}$</li>
+</ol>
+<h2 id="-2-2-">定義2.2 線形独立・従属</h2>
+<p>$K$上の線形空間$V$の要素$\boldsymbol{v}_1 , \dots , \boldsymbol{v}_n$ に対して</p>
+<p>これらが線形独立であるとは</p>
+<p>${}^\forall c_1, \dots , c_n \in K \ c_1 \boldsymbol{v}_1 + \cdots + c_n \boldsymbol{v}_n = 0 \Rightarrow c_1 = c_2 = \cdots = c_n = 0$ </p>
+<p>であり、線形独立でないことを線形従属であるという。</p>
+<h2 id="-2-3-">定義2.3 基底</h2>
+<p>$V$の基底とは</p>
+<p>$V$の部分集合$S$で以下を満たすもの</p>
+<ol>
+<li>$S$の任意の有限個の要素は線形独立</li>
+<li>${}^\forall \boldsymbol{v} \in V \ {}^\exists \boldsymbol{w}_1, \dots , \boldsymbol{w}_l \in S \ {}^\exists c_1 , \dots , c_l \in K \ \boldsymbol{v} = c_1 \boldsymbol{w}_1 + \cdots + c_l \boldsymbol{w}_l$  </li>
+</ol>
+<p>2の性質を満たすとき$V$は$S$ではられるという</p>
+<h2 id="-2-4-">定義2.4 部分空間</h2>
+<p>$V$に対して</p>
+<p>$V$の部分集合$W4が以下の性質をみたすとき、$W$を$V$の部分空間とよぶ</p>
+<ol>
+<li>$W$は$+$に関して$V$の部分群</li>
+<li>${}^\forall c \in K \ {}^\forall \boldsymbol{w} \in W \ c\boldsymbol{w} \in W$</li>
+</ol>
+<h2 id="-2-5-">定義2.5 商空間</h2>
+<p>$V$と$V$の部分空間$W$に対して</p>
+<p>$V$上の同値関係$\tilde{}$を $\boldsymbol{v}_1 \tilde{} \boldsymbol{v}_2 \Leftrightarrow \boldsymbol{v}_1 - \boldsymbol{v}_2 \in W$ で定義する。</p>
+<p>$\tilde{}$の同値類全体に</p>
+<p>$\lbrack \boldsymbol{v}_1 \rbrack + \lbrack \boldsymbol{v}_2 \rbrack = \lbrack \boldsymbol{v}_1 + \boldsymbol{v}_2 \rbrack$</p>
+<p>$c \bullet \lbrack \boldsymbol{v} \rbrack = \lbrack c \boldsymbol{v} \rbrack$</p>
+<p>で$+$と$\bullet$を定義すると</p>
+<p>これは$\text{well-defined}$で、これに関して同値類全体は$K$上の線形空間になる。</p>
+<p>これを$V$の$W$による商空間とよび$V \backslash{} W$と記す</p>
+<h2 id="-2-1">定理2.1</h2>
+<p>$\lbrace \boldsymbol{v}_1 , \dots , \boldsymbol{v}_n \rbrace$を$V$の基底</p>
+<p>$\rbrace \boldsymbol{w}_1 , \dots , \boldsymbol{w}_m$を$V$の線形独立な有限集合とする</p>
+<p>このとき$m \leq n$となる</p>
+
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}}); </script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script></body></html>
