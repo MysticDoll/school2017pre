@@ -190,5 +190,51 @@ sup {
 <p>$\lbrace \boldsymbol{v}_1 , \dots , \boldsymbol{v}_n \rbrace$を$V$の基底</p>
 <p>$\rbrace \boldsymbol{w}_1 , \dots , \boldsymbol{w}_m$を$V$の線形独立な有限集合とする</p>
 <p>このとき$m \leq n$となる</p>
+<h2 id="-2-1-">定理2.1の系</h2>
+<p>$\lbrace \boldsymbol{v}_1, \dots , \boldsymbol{v}_n \rbrace$と$\lbrace \boldsymbol{w}_1, \dots , \boldsymbol{w}_m \rbrace$ が同じ線形空間の基底なら、$n = m$</p>
+<h2 id="-2-6">定義2.6</h2>
+<p>線形食うか$V$が有限個の基底をもつとき、その個数を$V$の次元と呼ぶ。 $V$を有限次元という</p>
+<h2 id="-2-2">定理2.2</h2>
+<p>有限次元の$V$に対し、$V$の任意の線形独立な$\lbrace \boldsymbol{v}_1 , \dots , \boldsymbol{v}_l \rbrace$に対して、適当な$\lbrace \boldsymbol{v}_{l+1} , \dots \boldsymbol{v}_m \rbrace$
+をとって、$\lbrace \boldsymbol{v}_1 , \dots , \boldsymbol{v}_l , \boldsymbol{v}_{l+1} , \boldsymbol{v}_m \rbrace$ が$V$の基底であるように出来る</p>
+<h2 id="-2-7">定義2.7</h2>
+<p>体$K$上の2つの線形空間$V,W$に対して、$V$から$W$への写像$\varphi$が</p>
+<ol>
+<li>${}^\forall \boldsymbol{v}_1 , \boldsymbol{v}_2 \in V \  \varphi ( \boldsymbol{v}_1 + \boldsymbol{v}_2) = \varphi(\boldsymbol{v}_1) + \varphi(\boldsymbol{v}_2)$</li>
+<li>${}^\forall a \in K \ {}^\forall \boldsymbol{v} \in V \ \varphi  (a\boldsymbol{v}) = a \varphi (\boldsymbol{v})$</li>
+</ol>
+<p>の性質を満たすとき$\varphi$を線形写像とよぶ</p>
+<h3 id="-">注</h3>
+<p>$\varphi$が全単射のｔき$V$と$W$は同一視できる</p>
+<p>$V$の元$\boldsymbol{v}$と$W$の元$\varphi (\boldsymbol{v})$を同一視するということ</p>
+<p>$\varphi$を$V$から$W$への線形写像</p>
+<p>$\lbrace \boldsymbol{v}_1, \dots , \boldsymbol{v}_n \rbrace$</p>
+<p>$\lbrace \boldsymbol{w}_1, \dots , \boldsymbol{w}_m \rbrace$</p>
+<p>$\varphi (\boldsymbol{v}_1 , \dots , \boldsymbol{v}_n ) = (\varphi(\boldsymbol{v}_1) , \dots , \varphi(\boldsymbol{v}_n) ) = (\boldsymbol{w}_1, \dots , \boldsymbol{w}_m) 
+\begin{pmatrix}
+a_{11} &amp; \cdots &amp; a_{1n} \\
+\vdots \\
+a_{m1} &amp; \cdots &amp; a_{mn} 
+\end{pmatrix}$</p>
+<p>$\varphi : (\boldsymbol{v}_1 , \dots , \boldsymbol{v}_n ) \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix} \rightarrow \varphi (\boldsymbol{v}_1 , \dots , \boldsymbol{v}_n )\begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix} = 
+(\boldsymbol{w}_1 , \dots , \boldsymbol{w}_m ) \begin{pmatrix}
+a_{11} &amp; \cdots &amp; a_{1n} \\
+\vdots \\
+a_{m1} &amp; \cdots &amp; a_{mn} 
+\end{pmatrix} \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix} $</p>
+<p>$\lbrace \boldsymbol{v}_1 , \dots , \boldsymbol{v}_n \rbrace$と$\lbrace \boldsymbol{w}_1 , \dots , \boldsymbol{w}_m \rbrace$の成分で考えると</p>
+<p>$\varphi : \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix} \rightarrow 
+\begin{pmatrix}
+a_{11} &amp; \cdots &amp; a_{1n} \\
+\vdots \\
+a_{m1} &amp; \cdots &amp; a_{mn} 
+\end{pmatrix} \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix} $</p>
+<p>$\varphi_1 : V_1 \rightarrow V_2$ 線形写像</p>
+<p>$\varphi_2 : V_2 \rightarrow V_3$ 線形写像</p>
+<p>$V_1, V_2, V_3$ : $K$上の有限次元線形空間</p>
+<p>$\varphi_2 \varphi_1 (\boldsymbol{v}) = \varphi_2(\varphi_1(\boldsymbol{v}))$で写像$\varphi_2\varphi_1$を定めると
+これは$V_1$から$V_3$への線形写像$M_{\varphi_{23}} M_{\varphi_{12}}$</p>
+<h2 id="-2-3">定理2.3</h2>
+<p>体$K$の当袖成分とする$n \times n$行列$A,B$に対して $AB = E \Rightarrow BA = E$</p>
 
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}}); </script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script></body></html>
