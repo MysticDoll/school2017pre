@@ -152,6 +152,61 @@ sup {
 <p>$K$が代数的閉体(Algebraicaly Closed Field)であるとは</p>
 <p>${}^\forall f(X) \in K \lbrack X \rbrack {}^\exists \alpha \in K \ f(\alpha) \ f(X) \not{\in} K - \lbrace 0 \rbrace$</p>
 <h2 id="-3-1-">定理3.1 (代数学の基本定理)</h2>
-<p>$\boldsymbol{C}$は代数的閉体である</p>
+<p>$\boldsymbol{C}$は代数的閉体である。</p>
+<p>すなわち、任意の$n$次方程式$f(X) = X^n + a_{n-1} X^{n-1} + \cdots + a_0 = 0$</p>
+<p>$(a_0, \dots , a_{n-1} \in \boldsymbol{C}$ に対して、$f(\alpha) = 0$なる$\alpha \in \boldsymbol{C}$が存在する。</p>
+<h2 id="-3-2-">定理3.2 アーベルの定理</h2>
+<p>$n$が$5$以上のとき</p>
+<p>$n$次方程式</p>
+<p>$X^n + a_{n-1} X^{n-1} + \cdots + a_0 = 0$ には解の公式は存在しない</p>
+<p>つまり、任意の解を$a_{n-1}, \dots , a_0$の冪根と四則演算によって表現することはできない。</p>
+<h2 id="-3-2">定義3.2</h2>
+<p>体$K$の全単射$\varphi : K \rightarrow K $が同型(isomorphism)であるとは</p>
+<p>$\varphi (ab) = \varphi (a) \varphi (b)$
+$\varphi (a+b) = \varphi (a) + \varphi (b)$</p>
+<h3 id="-">注</h3>
+<p>体$K$の同型写像全体は群をなす(単位元は恒等写像)</p>
+<h2 id="-3-3">定義3.3</h2>
+<p>$K_1 \supset K_2$ 部分体</p>
+<p>同型写像$\varphi : K_1 \rightarrow K_1$が$K_2$不変とは、${}^\forall a \in K_2 \ \varphi (a) = a$</p>
+<h2 id="-3-4-">定義3.4 (ガロア群)</h2>
+<p>$\boldsymbol{Q}$上既約な$f(X) \in \boldsymbol{Q}[X]$に対して、</p>
+<p>($f(X)$が$\boldsymbol{Q}$上既約とは、$f(X)$が$\boldsymbol{Q}[X]$で因数分解できないこと)</p>
+<p>$f((X) = a(X - \alpha_1) \ \cdots (X - \alpha_n)$</p>
+<p>$a \in \boldsymbol{Q} \\ \alpha_1, \dots , \alpha_n \in \boldsymbol{C}$</p>
+<p>とする。</p>
+<p>ここで$i \neq j$なら$\alpha_i  \neq \alpha_j$</p>
+<p>$\boldsymbol{Q} (\alpha_1 , \dots , \alpha_n) \overset{\text{def}}{=} \lbrace \frac{q (\alpha_1 , \dots , \alpha_n)}{p(\alpha_1 , \dots , \alpha_n)} \rbrace $</p>
+<h2 id="-3-3">定理3.3</h2>
+<p>$\varphi$をガロア群の要素とすると</p>
+<p>${}^\forall i \ \varphi (\alpha_i) = \alpha_{\sigma (i)}$なる$\sigma (i)$がただ一つ存在する</p>
+<p>また、$\sigma$は$\lbrace 1, 2, \dots , n \rbrace$のち感になる、すなわち $i \neq k \Rightarrow \sigma (i) \neq \sigma (k)$</p>
+<h2 id="-3-4">定理3.4</h2>
+<p>$\boldsymbol{Q}$上既約な$\boldsymbol{Q}[X]$に対して</p>
+<p>$f(X) = 0$の解が$\sqrt{}$のみで表せる $\Leftrightarrow \mid G_f \mid = 2^n$</p>
+<p>$f(X)=0$の解が$\sqrt{}$と$\sqrt[3]{}$のみで表せる $\Leftrightarrow \mid G_f \mid = 2^n \bullet 3^m$</p>
+<h3 id="-">系</h3>
+<p>3次と4次の方程式の解は$\sqrt{}$と$\sqrt[3]{}$を使って表すことが出来る。</p>
+<h2 id="-3-5-">定理3.5 (ガロア理論を使って得られる主要定理)</h2>
+<p>$\boldsymbol{Q}$上既約な$n$次の$f(X) \in \boldsymbol{Q}[X]$</p>
+<p>に対して、$f(X)=0$の解が$\sqrt[n]{} , \dots , \sqrt{}$を使って表される</p>
+<p>$\Leftrightarrow G_f$の構造の性質だけを使っての表現 $G_f$が可解</p>
+<h3 id="-">注意</h3>
+<p>$n \geq 5$に対しては、ほとんどの$f$に対して$G_f$は可解ではない</p>
+<p>$\mid G_f \mid = 2^n \bullet 3^m$なら可解 逆は言えない</p>
+<h2 id="-3-6-">定理3.6 (ガウス)</h2>
+<p>$X^m - 1 = 0$ ($n$は素数)の$1$でない解が$\sqrt{}$のみを使って表される($\Leftrightarrow$正$m$角形が定規とコンパスで作図可能)</p>
+<p>$\Leftrightarrow \\ {}^\exists n \ m = 2^{2^n} + 1 \Leftrightarrow \mid G_{X^{m-1}} + \cdots + 1 \mid = 2^n$</p>
+<h2 id="-3-7">定理3.7</h2>
+<p>$\boldsymbol{Q}$上既約な$f(X) \in \boldsymbol{Q}[X]$に対して</p>
+<p>$f(X) = c(X - \alpha_1) \cdots (X - \alpha_n)$とする</p>
+<p>このとき、</p>
+<p>${}^\exists m_1 , \dots , m_n \in \boldsymbol{N} \ g, g_1 , \dots , g_n \in \boldsymbol{Q}[X]$</p>
+<p>$\beta = m_1 \alpha_1 + \cdots + m_n \alpha_n$</p>
+<p>$\alpha_1 = g_1(\beta), \dots , \alpha_n = g_n(\beta), g(\beta)$</p>
+<p>$g$は$\boldsymbol{Q}$上既約</p>
+<p>$\varphi \in G_f$に対して</p>
+<p>$g(X) = d(X - \beta_1) \cdots (X -\beta_l)$ ($\beta_1 = \beta$とおく)</p>
+<p>$\varphi (g) = g$なので、</p>
 
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}}); </script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script></body></html>
